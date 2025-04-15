@@ -1,5 +1,5 @@
 # Core
-streamlit>=1.30
+streamlit>=1.25
 pandas>=2.0
 numpy>=1.24.0
 
@@ -8,7 +8,7 @@ altair>=5.0.0
 
 # Daten & Verarbeitung
 polars>=0.20
-sqlite3  # in Python enthalten, keine Installation nötig
+#sqlite3  # in Python enthalten, keine Installation nötig
 openpyxl>=3.1.0  # für Excel (.xlsx)
 
 # PDF-Export
