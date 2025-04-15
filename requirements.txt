@@ -30,6 +30,3 @@ json5>=0.9.14
 # Interpolation
 scipy>=1.10.0
 matplotlib>=3.7
-
-# Optional: für HTML-Komponenten
-streamlit-components>=0.1.0
