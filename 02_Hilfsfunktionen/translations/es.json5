@@ -1,0 +1,55 @@
+{
+  "_version": "0.11a",
+  "_updated": "2025-04-15",
+  "_description": "english language file for WiBer v0-11a",
+  // section introduction
+  "app_title": "Adsorbus CoolCalc",
+  "intro_box": "Adsorbus CoolCalc performs a potential analysis of your cooling application.\nIn the form below, we collect all essential parameters of your existing system and your available waste heat.\nBased on this data, we calculate and compare alternatives using our adsorption chillers in terms of energy savings and cost-effectiveness.\nYou can download the result as a PDF report immediately. For further questions about implementation, installation or a detailed offer,\nplease feel free to contact us. We are happy to advise you.\nIf you wish, we can also pre-fill the form with example values.",
+
+  // section 1 general information
+  "section_title_main": "Data Entry for the Chiller",
+  "section_1": "1. General Information",
+  "site": "Installation site",
+  "operator": "Operator / Company",
+  "contact": "Contact person",
+  "email": "Email address",
+  "phone": "Phone number",
+  "postal_code": "ZIP code",
+  "city": "City",
+  "street": "Street and number",
+
+  // section 2 data chiller
+  "section_2": "2. Existing Chiller Data",
+  "nom_cooling_capa" : "Nenn-Kälteleistung (kW)",
+  "avg_cooling_capa" : "Durchschnittlich abgenommene Kälteleistung (kW), falls bekannt.",
+  "EER_nom" : "Wirkungsgrad (EER)",
+  "volumenstrom": "Water volume flow in m³/h",
+  "temp_eintritt": "Inlet temperature of the cooling water into the chiller [°C]",
+  "temp_austritt": "Outlet temperature of the cooling water from the chiller [°C]",
+  
+  // section energy usage
+  "section_3": "3. Energy Consumption & Costs",
+  "betriebsstunden": "Operating hours per year",
+  "strompreis": "Electricity price per kWh (EUR)",
+  "verbrauch_bekannt": "Is the annual electricity consumption known?",
+  "option_ja": "Yes",
+  "option_nein": "No",  
+  "ermitteln": "Would you like to estimate the consumption yourself (e.g., via short-term measurement)?",
+  "header_ermitteln": "Consumption recording via energy metering",
+  "info_ermitteln": "💡 If you have already measured the consumption data of your chiller, enter the measured electricity consumption of the chiller in kWh and the duration of the measurement in hours here.",
+  "messverbrauch": "Measured electricity consumption (kWh)",
+  "messdauer": "Duration of measurement (hours)",
+  "leistung_messung": "⚡ Average electrical power consumption: {value} kW",
+  "ber_stromverbrauch" : "With a running time of {value1} hours per year, your annual electricity consumption is approx: {value2} kWh.",
+  "berechnete_kaelteleistung": "❄️ Resulting average cooling capacity: {value} kW.",
+  "EER_fehlt" : "⚠️ Efficiency (EER) is missing for the calculation of the cooling capacity.",
+  "messdauer_null": "Please enter a measurement duration > 0.",
+
+  // calculation// Übersetzungen für Temperaturbereich
+  "temp_range_labels": {
+    "range_1": "eficiencia máxima o enfriamiento libre",
+    "range_2": "capacidad máxima",
+    "range_3": "capacidad limitada",
+    "range_4": "fuera del límite operativo"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  // Versionsinformationen
+    "_version": "0.11a",
+    "_updated": "2025-04-15",
+    "_description": "Sprachdatei für WiBer v0-11a",
+  // Abschnitt Einführung
+    "app_title": "Adsorbus CoolCalc",
+    "intro_box": "Adsorbus CoolCalc führt eine Potenzialanalyse zu Ihrer Kälteanwendung durch. \nIm nachfolgenden Formular erfassen wir alle wesentlichen Parameter Ihrer Bestandsanlage und Ihrer verfügbaren Abwärme. Anhand dieser Parameter berechnen und vergleichen wir Varianten mit unseren Adsorbtionskältemaschinen in Bezug auf Ihren energetischen Einsparungen und Ihrer Wirtschaftlichkeit.\nDas Ergebnis können Sie im Anschluss sofort als PDF-Report herunterladen. Für weitere Fragen zur Umsetzuzung, zur Installation und für ein detailliertes Angebot, nehmen Sie gerne Kontakt mit uns auf. Wir beraten Sie gerne.\nWenn Sie möchten, können wir das Formular auch automatisch mit Werten füllen.",
+
+  // Abschnitt allgemeine Informationen
+    "section_title_main": "Erfassung der Projektinformationen",
+    "section_1": "1. Allgemeine Informationen",
+    "site": "Standort der Anlage",
+    "operator": "Betreiber / Unternehmen",
+    "contact": "Kontaktperson",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "postal_code": "PLZ",
+    "city": "Ort",
+    "street": "Strasse und Hausnummer",
+
+  // Abschnitt Daten Bestandskältemaschine
+    "section_2": "2. Daten der Bestandskältemaschine",
+    "nom_cooling_capa" : "Nenn-Kälteleistung (kW)",
+    "avg_cooling_capa" : "Durchschnittlich abgenommene Kälteleistung (kW), falls bekannt.",
+    "EER_nom" : "Wirkungsgrad (EER)",
+    "volumenstrom": "Volumenstrom in m³/h",
+    "temp_eintritt": "Eintrittstemperatur [°C]",
+    "temp_austritt": "Austrittstemperatur [°C]",
+
+  // Abschnitt Energieverbrauch
+    "section_3": "3. Energieverbrauch & Kosten",
+    "betriebsstunden": "Betriebsstunden pro Jahr",
+    "strompreis": "Strompreis pro kWh (EUR)",
+    "verbrauch_bekannt": "Ist der Jahresstromverbrauch bekannt?",
+    "option_ja": "Ja",
+    "option_nein": "Nein",  
+    "ermitteln": "Wollen Sie den Verbrauch selbst ermitteln (z. B. per Kurzzeitmessung)?",
+    "header_ermitteln": "Verbrauchserfassung über Energiemessung",
+    "info_ermitteln": "💡 Falls Sie bereits Verbrauchsdaten Ihrer Kältemaschine gemessen haben, tragen Sie hier den gemessenen Stromverbrauch der Kältemaschine in kWh und die Dauer der Messung in Stunden ein.",
+    "messverbrauch": "Gemessener Stromverbrauch (kWh)",
+    "messdauer": "Dauer der Messung (Stunden)",
+    "leistung_messung": "⚡Das entspricht einer durchschnittlichen elektrischen Leistungsaufnahme von: {value} kW",
+    "ber_stromverbrauch" : "Bei einer Laufzeit von {value1} Stunden pro Jahr, Beträgt Ihr Jahresstromverbrauch etwa: {value2} kWh.",
+    "berechnete_kaelteleistung": "❄️ resultierende durchschnittliche Kälteleistung: {value} kW",
+    "EER_fehlt" : "⚠️ Wirkungsgrad (EER) fehlt für die Berechnung der Kälteleistung.",
+    "messdauer_null": "Bitte eine Messdauer > 0 angeben.",
+  
+    // Berechnungen
+
+    // Diagramme
+    "temp_range_labels": {
+      "range_1": "max. Effizienz oder freie Kühlung",
+      "range_2": "Volllastbetrieb",
+      "range_3": "begrenzte Leistung",
+      "range_4": "außerhalb des Betriebsbereichs"
+    },
+
+
+
+    "verbrauch_info": "💡 Zuerst ermitteln wir den IST-Zustand Ihrer Anlage. Hierfür benötigen wir folgende Angaben:",
+    "messung_info": "💡 Tragen Sie hier den gemessenen Wert Stromverbrauch Kältemaschine (kWh) und die Dauer der Messung in Stunden ein.",
+    "leistung_info": "💡 Maximale Kälteleistung laut Hersteller. Durchschnittswerte können geschätzt oder berechnet werden.",
+    "alternative_info": "💡 Volumenstrom in m³/h und Temperaturen an Ein- und Austritt zur Berechnung der Leistung.",
+    
+    "section_4": "Auslegungsdaten der Bestandskältemaschine",
+
+
+   
+    
+    "result_avg_elec_power": "⚡ Durchschnittliche elektrische Leistungsaufnahme:",
+    "result_avg_cooling_power": "❄️ resultierende durchschnittliche Kälteleistung:",
+    "result_annual_consumption": "🔌 Jahresstromverbrauch (prognostiziert):",
+    "calc_not_possible": "Berechnung der durchschnittlichen Kälteleistung nicht möglich – bitte Werte prüfen.",
+    "weather_search_radius": "Suchradius für Wetterstationen (km)",
+    "weather_temp_limits": "Temperaturgrenzen definieren",
+    "weather_limit_1": "Grenze 1 (z. B. < 12 °C)",
+    "weather_limit_2": "Grenze 2 (z. B. < 21 °C)",
+    "weather_limit_3": "Grenze 3 (z. B. < 30 °C)",
+    "weather_select_station": "Wetterstation auswählen",
+    "weather_distribution_title": "🔢 Temperaturverteilung (Stunden 2023):",
+    "weather_no_data": "⚠️ Keine gültige Station mit Temperaturdaten gefunden.",
+    "admin_title": "🔒 Entwicklerzugang: Datenbank-Export",
+    "admin_password": "Admin-Passwort eingeben",
+    "admin_download": "📥 Verschlüsselte Datenbank herunterladen",
+    "design_title": "🎯 Designpunkt Adsorptionskältemaschine",
+    "design_info": "💡 Bitte geben Sie die Design-Temperaturen ein (in °C).",
+    "design_input_ht": "Hochtemperatur (HT)",
+    "design_input_mt": "Mitteltemperatur (MT)",
+    "design_input_nt": "Niedertemperatur Austritt (NT)",
+    "design_calculate": "Designpunkt berechnen",
+    "design_result_cop": "✅ Interpolierter COP: **{cop}**",
+    "design_result_kl": "✅ Interpolierte Kälteleistung: **{kl} kW**",
+    "design_warning": "⚠️ Kein gültiger Interpolationswert gefunden (außerhalb des Kennfeldbereichs).",
+    "design_error_load": "❌ Kennfeld konnte nicht geladen werden.",
+    "disclaimer_footer": "© 2025 WiBer – Diese App dient der Auslegung und Bewertung von Adsorptionskältemaschinen. Alle Eingaben werden verschlüsselt verarbeitet. Keine Haftung für fehlerhafte Ergebnisse.",
+    "disclaimer_version": "Version: {version} • Veröffentlicht: {date} • Author: {author} ",  
+    "auto_key_1": "### Temperaturgrenzen definieren",
+    
+    "calc_annual_consumption": "🔌 Jahresstromverbrauch (prognostiziert): {value} kWh",
+    "max_cooling_power": "💡 Maximale Kälteleistung laut Hersteller. Durchschnittswerte können geschätzt oder berechnet werden.",
+    
+    
+    "diff_success": "✅ Unterschied zur Eingabe: {wert} kW ({abweichung}% Abweichung)",
+    "diff_warning": "⚠️ Unterschied zur Eingabe: {wert} kW ({abweichung}% Abweichung)",
+    "diff_error": "🚨 Starke Abweichung: {wert} kW ({abweichung}% Abweichung)",
+    "diff_zero": "Berechnete Kälteleistung ist 0 – kein Vergleich möglich.",
+    "kosten": "💶Jährliche Stromkosten: {value} €",
+    "encryption_suc": "✅ Daten wurden erfolgreich gespeichert und verschlüsselt!",
+    "but_show_sav" : "Gespeicherte Daten anzeigen",
+    "inf_not_saved": "Keine Daten in dieser Session gespeichert.",
+    "pdf_suc" : "✅ PDF wurde erstellt!",
+    "info_estimate_from_machine" : "Weiß jetzt nicht, was hier stehen soll?",
+    "question_estimate_from_machine" : "Hier weiß ich auch noch nicht.",
+    "no_encr_data": "⚠️ Keine verschlüsselte Datenbank gefunden.",
+    "wrong_password": "❌ Falsches Passwort.", 
+    "weather_expander_title" : "📈 Außentemperatur-Auswertung (DWD): ",
+
+    "submit": "Daten speichern",
+    "create_pdf": "PDF erstellen",
+    "download_pdf": "📄 PDF herunterladen",
+    "example_data": "Formular mit Beispielwerten vorausfüllen? 📝",
+
+        "auto_key_13": { "de": "💡 Volumenstrom in m³/h und Temperaturen an Ein- und Austritt zur Berechnung der Leistung." },
+
+      "tooltips": {
+        "site": "Name oder Bezeichnung des Anlagenstandorts",
+        "operator": "Firma oder Organisation, die die Anlage betreibt",
+        "contact": "Technische oder kaufmännische Ansprechperson",
+        "email": "E-Mail der Kontaktperson",
+        "phone": "Telefonnummer für Rückfragen",
+        "postal_code": "Postleitzahl des Standorts",
+        "city": "Ort des Standorts",
+        "street": "Straße und Hausnummer des Standorts",
+
+        "stromverbrauch": "Jährlicher Stromverbrauch der Kältemaschine in kWh inkl. aller Pumpen, Ventilatoren etc. sofern bekannt",
+        "strompreis": "Strompreis pro kWh laut Stromrechnung",
+        "betriebsstunden": "Anzahl der Betriebsstunden der Kältemaschine pro Jahr",
+        "max_kälteleistung": "Maximale Kälteleistung (Herstellerangabe) laut Datenblatt in kW",
+        "durchschn_kälteleistung": "Durchschnittlich abgenommene Kälteleistung in kW",
+        "wirkungsgrad": "Energie-Effizienz-Verhältnis (EER) der Anlage, üblicher Weise liegt dieser zwischen 2 und 5",
+        "messverbrauch": "Geben Sie hier den gemessenen Stromverbrauch Ihrer Anlage in kWh an.",
+        "messdauer": "Geben Sie hier die Dauer Ihrer Messung in Stunden an.",
+        "volumenstrom": "Wasser-Volumenstrom in m³/h",
+        "temp_eintritt": "Eintrittstemperatur des Kaltwassers in die Kältemaschine [°C]",
+        "temp_austritt": "Austrittstemperatur des Kaltwassers aus der Kältemaschine [°C]"
+      },
+      "labels":{
+        "stromverbrauch": "Tragen Sie bitte den Jahresstromverbrauch der Kältemaschine in kWh ein.",
+        "strompreis" : "Strompreis €/kWh",
+        "betriebsstunden" : "Wie viele Betriebsstunden erreicht Ihre Kältemaschine pro Jahr?",
+        "max_kälteleistung" : "Die maximale Kälteleistung in kW finden Sie im Datenblatt bzw. den Herstellernagaben.",
+        "avg_Kälteleistung" : "Für eine Verbrauchsprognose ist die durchschnittliche Kälteleistung in kW der bessere Wert."
+      }     
+}

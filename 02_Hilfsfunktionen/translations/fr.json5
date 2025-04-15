@@ -1,0 +1,9 @@
+// Übersetzungen für Temperaturbereich
+{
+  "temp_range_labels": {
+    "range_1": "efficacité maximale ou free cooling",
+    "range_2": "capacité maximale",
+    "range_3": "capacité limitée",
+    "range_4": "au-delà de la limite de fonctionnement"
+  }
+}
