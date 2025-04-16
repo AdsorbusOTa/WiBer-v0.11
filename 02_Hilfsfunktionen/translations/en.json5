@@ -1,7 +1,8 @@
 {
-  "_version": "0.11a",
-  "_updated": "2025-04-15",
-  "_description": "english language file for WiBer v0-11a",
+  // Versionsinformationen
+  "_version": "0.11b",
+  "_updated": "2025-04-16",
+  "_description": "english language file for WiBer v0-11b",
   // section introduction
   "app_title": "Adsorbus CoolCalc",
   "intro_box": "Adsorbus CoolCalc performs a potential analysis of your cooling application.\nIn the form below, we collect all essential parameters of your existing system and your available waste heat.\nBased on this data, we calculate and compare alternatives using our adsorption chillers in terms of energy savings and cost-effectiveness.\nYou can download the result as a PDF report immediately. For further questions about implementation, installation or a detailed offer,\nplease feel free to contact us. We are happy to advise you.\nIf you wish, we can also pre-fill the form with example values.",
@@ -46,7 +47,31 @@
   "messdauer_null": "Please enter a measurement duration > 0.",
 
   // calculation
+  "diff_success": "✅ Difference to input: {wert} kW ({abweichung}% deviation)",
+  "diff_warning": "⚠️ Difference to input: {wert} kW ({abweichung}% deviation)",
+  "diff_error": "🚨 Strong deviation: {wert} kW ({abweichung}% deviation)",
+  "diff_zero": "Calculated cooling capacity is 0 - no comparison possible.",
+  "calc_not_possible": "Calculation of average cooling capacity not possible – please check your values.",
+  "kosten": "💶Annual electricity costs: {value} €",
 
+  // Wetterdaten
+  "weather_title" : "4. Weather data & MT design point",
+  "stations_list_entry": "{station_id} – {name} – Distance: {distance} km",
+  "station_error": "⚠️ Error at station {station_id}: {error}",
+  "year_error" : "⚠️ Error in year {year}: {error}",
+  "weather_search_radius": "Search radius for weather stations (km)",
+  "manual_year" : "📅 Select year",
+  "auto_year" : "🔄 Determine year automatically",
+  "start_search" : "🧪 Start station search",
+  "station_dropdown_entry": "📍 {station_id} – {name} – Distance: {distance} km",
+  "weather_select_station": "Select weather station",
+  "weather_temp_limits": "Define temperature thresholds",
+  "weather_limit_1": "Limit 1",
+  "weather_limit_2": "Limit 2",
+  "weather_limit_3": "Limit 3",
+  "weather_expander_title" : "📈 Outdoor temperature distribution (source: DWD, hourly): ",
+  "loading_stations_and_parameters": "Stations & parameters are loaded...",
+  
   // diagrams
   "temp_range_labels": {
     "range_1": "max. efficiency or free cooling",
@@ -54,32 +79,25 @@
     "range_3": "limited capacity",
     "range_4": "beyond operational limit"
   },
-
-  "submit": "Save data",
-  "create_pdf": "Create PDF",
-  "download_pdf": "📄 Download PDF",
-  "example_data": "Pre-fill form with example values? 📝",
-  "verbrauch_info": "💡 First, we determine the current state of your system. Please provide the following information:",
-  "messung_info": "💡 Enter the measured power consumption of the chiller (kWh) and the duration of the measurement in hours.",
-  "leistung_info": "💡 Maximum cooling capacity according to manufacturer. Average values can be estimated or calculated.",
-  "alternative_info": "💡 Volume flow in m³/h and inlet/outlet temperatures for performance calculation.",
-  "section_4": "Design data of the existing chiller",
-  
-  "result_avg_cooling_power": "❄️ Resulting average cooling capacity:",
-  "result_annual_consumption": "🔌 Annual electricity consumption (forecast):",
-  "calc_not_possible": "Calculation of average cooling capacity not possible – please check your values.",
-  "weather_search_radius": "Search radius for weather stations (km)",
-  "weather_temp_limits": "Define temperature thresholds",
-  "weather_limit_1": "Limit 1 (e.g. < 12 °C)",
-  "weather_limit_2": "Limit 2 (e.g. < 21 °C)",
-  "weather_limit_3": "Limit 3 (e.g. < 30 °C)",
-  "weather_select_station": "Select weather station",
-  "weather_distribution_title": "🔢 Temperature distribution (hours 2023):",
+  "weather_hours_ranges": {
+    "range_1": "{label}: < {g1} °C : {h} {stunden}",
+    "range_2": "{label}: {g1} °C to <{g2} °C : {h} {stunden}",
+    "range_3": "{label}: {g2} °C to <{g3} °C : {h} {stunden}",
+    "range_4": "{label}: ≥ {g3} °C : {h} {stunden}"
+  },
+  "stunden": "Stunden",
+  //"weather_distribution_title": "🔢 Temperaturverteilung (Stunden 2023):",
+  "chart_title_verlauf": "📈 Temperature profile over the year",
+  "chart_hour_axis_title": "Hour in year [h]", // Titel der X-Achse im Temperaturverlauf-Diagramm
+  "chart_month_axis_title": "Date", // Titel der X-Achse im Temperaturverlauf-Diagramm
+  "chart_temperature_axis_title": "Temperature [°C]", // Titel der Y-Achse im Temperaturverlauf-Diagramm
+  "temp_area" : "Temperature range",
+  "title_jdl" : "📈 Temperature (annual duration curve)",
+  "data_error" : "⚠️ Retrieval error: {error}",
   "weather_no_data": "⚠️ No valid station with temperature data found.",
-  "admin_title": "🔒 Developer Access: Database Export",
-  "admin_password": "Enter admin password",
-  "admin_download": "📥 Download encrypted database",
-  "design_title": "🎯 Design Point of Adsorption Chiller",
+
+  // Designpunkt
+  "design_title": "5. Design Point of Adsorption Chiller",
   "design_info": "💡 Please enter the design temperatures (in °C).",
   "design_input_ht": "High Temperature (HT)",
   "design_input_mt": "Medium Temperature (MT)",
@@ -89,9 +107,80 @@
   "design_result_kl": "✅ Interpolated cooling capacity: **{kl} kW**",
   "design_warning": "⚠️ No valid interpolation value found (outside the characteristic map range).",
   "design_error_load": "❌ Characteristic map could not be loaded.",
+
+  // Daten speichern
+  "submit": "Save data",
+  "encryption_suc": "✅ Data has been successfully saved and encrypted!",
+  "but_show_sav" : "Display saved data",
+  "inf_not_saved": "No data stored in this session.",
+
+  // PDF operationen    
+  "create_pdf": "Create PDF",
+  "pdf_suc" : "✅ PDF has been created!",
+  "download_pdf": "📄 Download PDF",
+
+  // Admin Zugang
+  "admin_title": "🔒 Developer Access: Database Export",
+  "admin_password": "Enter admin password",
+  "admin_download": "📥 Download encrypted database",
+  "no_encr_data": "⚠️ No encrypted database found.",
+  "wrong_password": "❌ Incorrect password.", 
+  
+  // disclaimer
   "disclaimer_footer": "© 2025 WiBer – created by otamm on March 2025 This app is used to design and evaluate adsorption chillers. All entries are processed in encrypted form. No liability for incorrect results.",
   "disclaimer_version": "Version: {version} • Published: {date} • Author: {author} ",
 
+  // tooltips
+  "tooltips": {
+    "site": "Name or label of the installation site",
+    "operator": "Company or organization operating the system",
+    "contact": "Technical or commercial contact person",
+    "email": "Email of the contact person",
+    "phone": "Phone number for inquiries",
+    "postal_code": "Postal code of the site",
+    "city": "City of the site",
+    "street": "Street and house number of the site",
+ 
+    "stromverbrauch": "Annual electricity consumption of the chiller in kWh including pumps, fans etc., if known",
+    "strompreis": "Electricity price per kWh according to electricity bill",
+    "betriebsstunden": "Operating hours of the chiller per year",
+    "max_kälteleistung": "Maximum cooling capacity according to manufacturer data sheet in kW",
+    "durchschn_kälteleistung": "Average cooling capacity taken in kW",
+    "wirkungsgrad": "Energy efficiency ratio (EER) of the system, typically between 2 and 5",
+    "messverbrauch": "Enter the measured power consumption of your system in kWh.",
+    "messdauer": "Enter the duration of your measurement in hours.",
+    "volumenstrom": "Water volume flow in m³/h",
+    "temp_eintritt": "Inlet temperature of the cooling water into the chiller [°C]",
+    "temp_austritt": "Outlet temperature of the cooling water from the chiller [°C]",
+    "weather_limit_1": "z. B. < 12 °C for maximum efficiency or free cooling",
+    "weather_limit_2": "z. B. < 27 °C for unrestricted operation, outside temperature below design point",
+    "weather_limit_3": "z. B. < 30 °C for restricted operation, outside temperature between design point and max. limit",
+    "hour" : "Hour per year",
+    "date" : "Date:",
+    "temperature" : "Temperature °C",
+    "value" : "Temperature",
+    "area" : "Temperature area"
+  },
+
+  // labels
+  "labels":{
+    "stromverbrauch": "Please enter the annual power consumption of the chiller in kWh.",
+    "strompreis" : "Electricity price €/kWh",
+    "betriebsstunden" : "How many operating hours does your chiller achieve per year?",
+    "max_kälteleistung" : "The maximum cooling capacity in kW can be found in the data sheet or the manufacturer's specifications.",
+    "avg_Kälteleistung" : "For a consumption forecast, the average cooling capacity in kW is the better value."
+  },     
+
+  // unused 
+  "example_data": "Pre-fill form with example values? 📝",
+  "verbrauch_info": "💡 First, we determine the current state of your system. Please provide the following information:",
+  "messung_info": "💡 Enter the measured power consumption of the chiller (kWh) and the duration of the measurement in hours.",
+  "leistung_info": "💡 Maximum cooling capacity according to manufacturer. Average values can be estimated or calculated.",
+  "alternative_info": "💡 Volume flow in m³/h and inlet/outlet temperatures for performance calculation.",
+  "section_4": "Design data of the existing chiller",
+  "result_avg_cooling_power": "❄️ Resulting average cooling capacity:",
+  "result_annual_consumption": "🔌 Annual electricity consumption (forecast):",
+  "weather_distribution_title": "🔢 Temperature distribution (hours 2023):",
   "auto_key_1": "### Temperaturgrenzen definieren",
   "auto_key_2": "💡 Tragen Sie hier den gemessenen Wert Stromverbrauch Kältemaschine (kWh) und die Dauer der Messung in Stunden ein.",
   "calc_electric_power": "⚡Durchschnittliche elektrische Leistungsaufnahme: {value} kW",
@@ -99,46 +188,12 @@
   "calc_annual_consumption": "🔌 Jahresstromverbrauch (prognostiziert): {value} kWh",
   "auto_key_3": "Bitte eine Messdauer > 0 angeben.",
   "max_cooling_power": "💡 Maximale Kälteleistung laut Hersteller. Durchschnittswerte können geschätzt oder berechnet werden.",
-  "diff_success": "✅ Unterschied zur Eingabe: {wert} kW ({abweichung}% Abweichung)",
-  "diff_warning": "⚠️ Unterschied zur Eingabe: {wert} kW ({abweichung}% Abweichung)",
-  "diff_error": "🚨 Starke Abweichung: {wert} kW ({abweichung}% Abweichung)",
-  "diff_zero": "Berechnete Kälteleistung ist 0 – kein Vergleich möglich.",
-
-      "auto_key_5": { "de": "2.1 Messbasierte Verbrauchserfassung" },
-      "auto_key_11": { "de": "Berechnete Kälteleistung ist 0 – kein Vergleich möglich." },
-      "auto_key_6": { "de": "Keine Daten in dieser Session gespeichert." },
-      "auto_key_7": { "de": "⚠️ Keine verschlüsselte Datenbank gefunden." },
-      "auto_key_8": { "de": "✅ Daten wurden erfolgreich gespeichert und verschlüsselt!" },
-      "auto_key_9": { "de": "✅ PDF wurde erstellt!" },
-      "auto_key_10": { "de": "❌ Falsches Passwort." }, 
-      "auto_key_13": { "de": "💡 Volumenstrom in m³/h und Temperaturen an Ein- und Austritt zur Berechnung der Leistung." },
-
-  "tooltips": {
-      "standort": "Name or label of the installation site",
-      "betreiber": "Company or organization operating the system",
-      "kontaktperson": "Technical or commercial contact person",
-      "email": "Email of the contact person",
-      "telefon": "Phone number for inquiries",
-      "plz": "Postal code of the site",
-      "ort": "City of the site",
-      "strasse": "Street and house number of the site",
-      "stromverbrauch": "Annual electricity consumption of the chiller in kWh including pumps, fans etc., if known",
-      "strompreis": "Electricity price per kWh according to electricity bill",
-      "betriebsstunden": "Operating hours of the chiller per year",
-      "max_kälteleistung": "Maximum cooling capacity according to manufacturer data sheet in kW",
-      "durchschn_kälteleistung": "Average cooling capacity taken in kW",
-      "wirkungsgrad": "Energy efficiency ratio (EER) of the system, typically between 2 and 5",
-      "messverbrauch": "Enter the measured power consumption of your system in kWh.",
-      "messdauer": "Enter the duration of your measurement in hours.",
-      "volumenstrom": "Water volume flow in m³/h",
-      "temp_eintritt": "Inlet temperature of the cooling water into the chiller [°C]",
-      "temp_austritt": "Outlet temperature of the cooling water from the chiller [°C]"
-  },
-  "labels":{
-      "stromverbrauch": "Jahresstromverbrauch der Kältemaschine (kWh)",
-      "strompreis" : "Strompreis €/kWh",
-      "betriebsstunden" : "Betriebsstunden",
-      "max_kälteleistung" : "maximale Kälteleistung kW",
-      "avg_Kälteleistung" : "durchschnittliche Kälteleistung kW"
-  }
+  "auto_key_5": { "de": "2.1 Messbasierte Verbrauchserfassung" },
+  "auto_key_11": { "de": "Berechnete Kälteleistung ist 0 – kein Vergleich möglich." },
+  "auto_key_6": { "de": "Keine Daten in dieser Session gespeichert." },
+  "auto_key_7": { "de": "⚠️ Keine verschlüsselte Datenbank gefunden." },
+  "auto_key_8": { "de": "✅ Daten wurden erfolgreich gespeichert und verschlüsselt!" },
+  "auto_key_9": { "de": "✅ PDF wurde erstellt!" },
+  "auto_key_10": { "de": "❌ Falsches Passwort." }, 
+  "auto_key_13": { "de": "💡 Volumenstrom in m³/h und Temperaturen an Ein- und Austritt zur Berechnung der Leistung." }
 }

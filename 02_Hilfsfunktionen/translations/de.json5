@@ -59,7 +59,6 @@
     "stations_list_entry": "{station_id} – {name} – Entfernung: {distance} km",
     "station_error": "⚠️ Fehler bei Station {station_id}: {error}",
     "year_error" : "⚠️ Fehler in Jahr {year}: {error}",
-
     "weather_search_radius": "Suchradius für Wetterstationen (km)",
     "manual_year" : "📅 Jahr auswählen",
     "auto_year" : "🔄 Jahr automatisch ermitteln",
@@ -130,6 +129,7 @@
     // disclaimer
     "disclaimer_footer": "© 2025 WiBer – Diese App dient der Auslegung und Bewertung von Adsorptionskältemaschinen. Alle Eingaben werden verschlüsselt verarbeitet. Keine Haftung für fehlerhafte Ergebnisse.",
     "disclaimer_version": "Version: {version} • Veröffentlicht: {date} • Author: {author} ",  
+    
     // tooltips
     "tooltips": {
       "site": "Name oder Bezeichnung des Anlagenstandorts",
