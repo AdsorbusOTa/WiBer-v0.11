@@ -15,37 +15,46 @@ WiBer ist ein Streamlit-basiertes Tool zur Analyse von Kälteleistung, Energieei
 - Kälteleistung und COP nach Temperaturtripel berechnen
 - überarbeitetes Layout
 - Jahresdauerlinie mit Temperaturbereichen
+- Layout und Reighenfolge Interview angepasst
 
 ## 🚀 Start
 
 ```bash
 pip install -r requirements.txt
-streamlit run streamlit_app_v0-11a.py
+streamlit run streamlit_app_v0-11b.py
 
 ## 📦 Abhängigkeiten
 
 Dieses Projekt basiert auf folgenden zentralen Bibliotheken (min Version):
-
 # Core
-streamlit>=1.30
+streamlit>=1.25
 pandas>=2.0
 numpy>=1.24.0
+
 # Plotting
 altair>=5.0.0
+
 # Daten & Verarbeitung
 polars>=0.20
-sqlite3  # in Python enthalten, keine Installation nötig
+#sqlite3  # in Python enthalten, keine Installation nötig
 openpyxl>=3.1.0  # für Excel (.xlsx)
+
 # PDF-Export
 fpdf>=1.7.2
+PyPDF2>=3.0
+
 # Verschlüsselung
 cryptography>=42.0.0
+
 # Wetterdaten
 wetterdienst>=0.107.0
+
 # Geodaten
 geopy>=2.3.0
+
 # JSON mit Kommentaren
 json5>=0.9.14
+
 # Interpolation
 scipy>=1.10.0
 matplotlib>=3.7
